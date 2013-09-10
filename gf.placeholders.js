@@ -2,7 +2,7 @@
 
 var gf_placeholder = function() {
 
-	$('.gform_wrapper .gplaceholder')
+	$('.gform_wrapper')
 		.find('input, textarea').filter(function(i){
 			var $field = $(this);
 			
