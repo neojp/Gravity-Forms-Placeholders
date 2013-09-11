@@ -40,6 +40,7 @@ var gf_placeholder = function() {
 			},
 			type: 'get'
 		});
+	$('.gfield_label').show();
 };
 
 $(document).ready(function(){
