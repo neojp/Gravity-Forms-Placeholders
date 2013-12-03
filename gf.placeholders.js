@@ -28,7 +28,9 @@ var gf_placeholder = function() {
 		});
 
 	var support = (!('placeholder' in document.createElement('input'))); // borrowed from Modernizr.com
-	if ( support && jquery_placeholder_url )
+	var placeholders = $('.gform_fields li.gplaceholder').length;
+
+	if ( placeholders != 0 && support && jquery_placeholder_url ) {
 		$.ajax({
 			cache: true,
 			dataType: 'script',
@@ -40,6 +42,7 @@ var gf_placeholder = function() {
 			},
 			type: 'get'
 		});
+	}
 };
 
 $(document).ready(function(){
