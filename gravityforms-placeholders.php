@@ -18,7 +18,7 @@ if ( isset( $GLOBALS['pagenow'] ) && $GLOBALS['pagenow'] == 'wp-login.php' )
 add_action('wp_print_scripts', 'gf_placeholder_enqueue_scripts');
 
 function gf_placeholder_enqueue_scripts() {
-	$plugin_url = plugins_url( basename(dirname(__FILE__)) );
-	echo "<script>var jquery_placeholder_url = '" . $plugin_url . "/jquery.placeholder-1.0.1.js';</script>";
-	wp_enqueue_script('_gf_placeholders', $plugin_url . '/gf.placeholders.js', array('jquery'), '1.0' );
+	$plugin_url = plugin_dir_url( __FILE__ );
+	echo "<script>var jquery_placeholder_url = '" . $plugin_url . "jquery.placeholder-1.0.1.js';</script>";
+	wp_enqueue_script('_gf_placeholders', $plugin_url . 'gf.placeholders.js', array('jquery'), '1.0' );
 }
