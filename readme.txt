@@ -25,6 +25,12 @@ http://github.com/neojp/gravity-forms-placeholders/
 
 == Changelog ==
 
+= 1.3.0 =
+* only enqueue script when a Gravity Forms form requires it
+* set jquery.placeholder script location as localisation on main script
+* clean up script to remove JSHint errors/warnings, minify, move into subfolder
+* convert all line endings to LF, was mix of LF and CR/LF
+
 = 1.2.1 =
 * Fix IE7 member not found error
 
