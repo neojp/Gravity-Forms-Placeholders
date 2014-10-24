@@ -16,15 +16,17 @@ var gf_placeholder = function() {
 		.each(function(){
 			var $field = $(this);
 
-			var id = this.id;
-			var $labels = $('label[for=' + id + ']').hide();
-			var label = $labels.last().text();
+			var id = $field.attr('id');
+			if(id){
+				var $labels = $('label[for=' + id + ']').hide();
+				var label = $labels.last().text();
 
-			if (label.length > 0 && label[ label.length-1 ] == '*') {
-				label = label.substring(0, label.length-1) + ' *';
+				if (label.length > 0 && label[ label.length-1 ] == '*') {
+					label = label.substring(0, label.length-1) + ' *';
+				}
+
+				$field[0].setAttribute('placeholder', label);
 			}
-
-			$field[0].setAttribute('placeholder', label);
 		});
 
 	var support = (!('placeholder' in document.createElement('input'))); // borrowed from Modernizr.com
