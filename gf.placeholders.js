@@ -17,6 +17,10 @@ var gf_placeholder = function() {
 			var $field = $(this);
 
 			var id = this.id;
+			if (id === '') {
+				return;
+			}
+			
 			var $labels = $('label[for=' + id + ']').hide();
 			var label = $labels.last().text();
 
